@@ -24,12 +24,12 @@ namespace ProjectMVC.Models
 
         public string ProductImage { get; set; }
         
-        public int SupplierId { get; set; }
+        public int SuplierId { get; set; }
 
         [Timestamp]
         public byte[] TimeStamp { get; set; }
 
-        [ForeignKey("SupplierId")]
+        [ForeignKey("SuplierId")]
         public Suplier Suplier { get; set; }
 
     }

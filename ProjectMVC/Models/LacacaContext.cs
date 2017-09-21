@@ -25,5 +25,7 @@ namespace ProjectMVC.Models
 
             base.OnModelCreating(modelBuilder);
         }
+
+        public System.Data.Entity.DbSet<ProjectMVC.Models.Suplier> Supliers { get; set; }
     }
 }
