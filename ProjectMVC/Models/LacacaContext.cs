@@ -17,9 +17,12 @@ namespace ProjectMVC.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>().HasKey(p => p.ProductId);
             modelBuilder.Entity<Product>().Property(b => b.ProductId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            
+            modelBuilder.Entity<Suplier>().Property(b => b.SuplierId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
             base.OnModelCreating(modelBuilder);
         }
     }
